@@ -149,7 +149,7 @@ const SearchBar = props => {
     }
         return( 
             <>
-            <span className='inputWrapper' id="state">
+            <div className='inputWrapper' id="state">
                 <img src={location}/>
                 <input 
                 type='text' 
@@ -161,9 +161,9 @@ const SearchBar = props => {
                 required
                 />
                 <SearchPop locations={filteredStates} clickFunction={clickStateSuggestions}/>
-            </span>
+            </div>
             
-            <span className={`inputWrapper ${disableCityInput}`} id="city">
+            <div className={`inputWrapper ${disableCityInput}`} id="city">
                 <img src={fetchingCities.current ? loadingIcon : location} className={fetchingCities.current ? 'rotateLoad' : null}/>
                 <input 
                 type='text' 
@@ -175,7 +175,7 @@ const SearchBar = props => {
                 disabled={displayInputs ? false : true}
                 />
                 <SearchPop locations={filteredCities} clickFunction={clickCitySuggetions}/>
-            </span>
+            </div>
             </>
         )
     }

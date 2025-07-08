@@ -78,7 +78,7 @@ const ResultCard = props => {
                 </div>
                 <div className='resultCardContent'>
                     <div className='resultContent-left'>
-                        <h6 className='resultCardTitle'>{hospitalName}</h6>
+                        <h3 className='resultCardTitle'>{hospitalName}</h3>
                         <div className='resultLocation'>
                             <span className='resultCity'>{`${county}, ${city}`}</span>
                             <span className='resultCardSubtext'>{hospitalType}</span>
