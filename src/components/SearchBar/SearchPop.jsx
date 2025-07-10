@@ -1,7 +1,7 @@
 
-import React from 'react';
+//import React from 'react';
 //components
-import ResultCard from '../ResultCard/ResultCard';
+//import ResultCard from '../ResultCard/ResultCard';
 import Button from '../Button/Button';
 
 const SearchPop = props => {
@@ -29,7 +29,21 @@ const SearchPop = props => {
 
         if(!locations || !locations?.length) return null;
 
-        return locations.map(item => <span onClick={() =>  clickFunction(item)} className='SearchPopItem'>{item}</span>)
+        //return locations.map(item => <span onClick={() =>  clickFunction(item)} className='SearchPopItem'><li>{item}</li></span>)
+        return (
+        <ul>
+            {locations.map((item, index) => (
+            <li
+                key={index}
+                onClick={() => clickFunction(item)}
+                className="SearchPopItem"
+            >
+                {item}
+            </li>
+            ))}
+        </ul>
+        );
+
     }
     return (
         <span className='SearchPop'>
