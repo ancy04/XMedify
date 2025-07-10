@@ -3,6 +3,7 @@
 //components
 //import ResultCard from '../ResultCard/ResultCard';
 import Button from '../Button/Button';
+import "./SearchPop.css";
 
 const SearchPop = props => {
     //props
