@@ -178,6 +178,7 @@ const SearchBar = props => {
         <form onSubmit={handleSubmit} className={`SearchBar ${customClass}`}>
             {displayInputs()}
             <Button
+                id="searchBtn"
                 formSubmit="true"
                 text={fetchingHospitals ? "Fetching..." : "Search"}
                 icon={fetchingHospitals ? loadingIcon : searchIcon}

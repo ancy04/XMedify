@@ -5,8 +5,7 @@ import "./Button.css";
 const Button = ({text, buttonClass, icon, clickFuntion, formSubmit, rotateIcon}) => {
     return (
         <button 
-            id="searchBtn"
-            // label="Search"
+            //bel="Search"
             className={`Button ${buttonClass}`} 
             onClick={clickFuntion}
             type={formSubmit ? "submit" : null}
