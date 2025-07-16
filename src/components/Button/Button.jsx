@@ -2,9 +2,10 @@ import React from 'react';
 //styles
 import "./Button.css";
 
-const Button = ({text, buttonClass, icon, clickFuntion, formSubmit, rotateIcon}) => {
+const Button = ({text, buttonClass, icon, clickFuntion, formSubmit, rotateIcon, id}) => {
     return (
         <button 
+            id={id} 
             //bel="Search"
             className={`Button ${buttonClass}`} 
             onClick={clickFuntion}
