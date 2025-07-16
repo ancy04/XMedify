@@ -96,10 +96,16 @@ const SearchBar = props => {
         setFilteredStates(foundStates);
     };
 
+    // const filterCitiesFunc = () => {
+    //     const foundCities = findLocations(allCities, cityName);
+    //     setFilteredCities(foundCities);
+    // };
     const filterCitiesFunc = () => {
-        const foundCities = findLocations(allCities, cityName);
-        setFilteredCities(foundCities);
+    let foundCities =
+        cityName === "" ? allCities : findLocations(allCities, cityName);
+    setFilteredCities(foundCities);
     };
+
 
     const filterBookingsFunc = () => {
         const hospitals = findBookings(bookings, hospitalName);
@@ -167,6 +173,11 @@ const SearchBar = props => {
                         placeholder={fetchingCities.current ? "Fetching cities..." : 'city'}
                         required
                         disabled={disableCityInput ? true : false}
+                        onFocus={() => {
+                        if (!cityName_onChange.current) {
+                            setFilteredCities(allCities);
+                        }
+                        }}
                     />
                     <SearchPop locations={filteredCities} clickFunction={clickCitySuggestions} />
                 </div>

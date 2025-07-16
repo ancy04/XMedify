@@ -28,7 +28,7 @@ const SearchPop = ({ locations, clickFunction, hospitals, atBookingsPage }) => {
       <li
         key={index}
         onClick={() => clickFunction(item)}
-        //className='SearchPopItem'
+        className='SearchPopItem'
       >
         {item}
       </li>
