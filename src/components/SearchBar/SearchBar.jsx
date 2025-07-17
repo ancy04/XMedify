@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 //styles
 import "./SearchBar.css"
@@ -49,9 +50,13 @@ const SearchBar = props => {
         filterBookingsFunc();
     }, [hospitalName]);
 
+    const navigate = useNavigate(); //  Hook
     const handleSubmit = async event => {
         event.preventDefault();
         getLocationData("hospitals");
+        // 🔁 Redirect to /find after search completes
+        navigate("/find");
+
     };
 
     const getLocationData = async (dataType, location) => {
