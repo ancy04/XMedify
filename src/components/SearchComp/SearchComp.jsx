@@ -29,9 +29,9 @@ const SearchComp = () => {
     return (
         <div className='SearchComp'>
             <div className='commonContainer SearchCompBody'>
-                {/* <Link to="/find"> */}
+                <Link to="/find">
                     <SearchBar atHomePage={true}/>
-                {/* </Link> */}
+                </Link>
                 <div className='cardsDivWrapper'>
                     <p>You may be looking for</p>
                     <div className='cardsDiv'>
